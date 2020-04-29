@@ -28,7 +28,7 @@ for line in lines:
     tick_label.append(pid2name[pid])
 
 fig, ax = plt.subplots()
-ax.barh(y=range(len(lines)), width=width, left=left, tick_label=tick_label)
+ax.barh(y=range(len(lines))[::-1], width=width, left=left, tick_label=tick_label)
 ax.set_title(dmesg)
 ax.grid()
 ax.set_xlabel('time')
